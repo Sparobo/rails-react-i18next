@@ -35,7 +35,7 @@ https://github.com/i18next/react-i18next
 
 i18nextとreact-i18nextだけのインストールは必要ですが、i18next-xhr-backendとi18next-browser-languagedetectorもおすすめです。
 ```sh
-$ yarn install i18next i18next-xhr-backend i18next-browser-languagedetector react-i18next
+$ yarn add i18next i18next-xhr-backend i18next-browser-languagedetector react-i18next
 ```
 - https://github.com/i18next/react-i18next
 - https://github.com/i18next/i18next-xhr-backend
