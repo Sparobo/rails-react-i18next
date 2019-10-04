@@ -159,7 +159,7 @@ const MyComponent = () => {
 ```
 
 ### コンテンツ翻訳
-```
+```javascript
 <div>{t('title')}</div>
 <div>{t('description.part2')}</div>
 ```
@@ -171,11 +171,9 @@ i18n.changeLanguage('en');
 i18n.changeLanguage('de');
 ```
 
-# DIFF確認用
+## DIFF確認用
 https://github.com/Sparobo/rails-react-i18next/compare/f0bbc9048e0d7760300647b392636c65dbce3716...master
 
-# Doc
-https://react.i18next.com/
-
 # 参照
-https://shinshin86.hateblo.jp/entry/2019/09/28/084835
+- https://react.i18next.com/
+- https://shinshin86.hateblo.jp/entry/2019/09/28/084835
