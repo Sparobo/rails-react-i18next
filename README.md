@@ -44,7 +44,7 @@ $ yarn add i18next i18next-xhr-backend i18next-browser-languagedetector react-i1
   - ブラウザでユーザー言語を検出するために使用されるi18next言語検出プラグインです。
 
 ## i18n.jsファイル作成
-https://github.com/kiennt91/rails-react/blob/master/app/javascript/packs/i18n.js
+https://github.com/Sparobo/rails-react-i18next/blob/master/app/javascript/packs/i18n.js
 
 i18nextを設定する用です。どんなプラグインを使うか、サーバからリソースをロードパスもこちらを設定します。
 デフォルトのロードパスは/locales/{{lng}}/translation.jsonです。{{lng}}はen, jpなどです。
@@ -114,9 +114,21 @@ end
 ```
 
 ## テスト用App.js作成
-https://github.com/kiennt91/rails-react/blob/master/app/javascript/packs/App.js
+https://github.com/Sparobo/rails-react-i18next/blob/master/app/javascript/packs/App.js
 
 これはreact-i18nextからExampleをそのまま使います。三つの翻訳方法を紹介します。
+
+```javascript
+import { useTranslation, withTranslation, Trans } from 'react-i18next';
+import './i18n';
+```
+
+### useTranslation (hook)
+https://react.i18next.com/latest/usetranslation-hook
+
+```javascript
+const { t, i18n } = useTranslation();
+```
 
 ### withTranslation (HOC)
 https://react.i18next.com/latest/withtranslation-hoc
@@ -146,11 +158,10 @@ const MyComponent = () => {
 }
 ```
 
-### useTranslation (hook)
-https://react.i18next.com/latest/usetranslation-hook
-
-```javascript
-const { t, i18n } = useTranslation();
+### コンテンツ翻訳
+```
+<div>{t('title')}</div>
+<div>{t('description.part2')}</div>
 ```
 
 ### 言語を切り替える
@@ -160,10 +171,10 @@ i18n.changeLanguage('en');
 i18n.changeLanguage('de');
 ```
 
-## DIFF確認用
-https://github.com/kiennt91/rails-react/compare/f0bbc9048e0d7760300647b392636c65dbce3716...master
+# DIFF確認用
+https://github.com/Sparobo/rails-react-i18next/compare/f0bbc9048e0d7760300647b392636c65dbce3716...master
 
-## Doc
+# Doc
 https://react.i18next.com/
 
 # 参照
