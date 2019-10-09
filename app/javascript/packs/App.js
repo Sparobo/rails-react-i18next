@@ -32,8 +32,8 @@ const Page = () => {
     <div className="Home">
       <div className="Home-header">
         <Welcome />
-        <button onClick={() => changeLanguage('de')}>de</button>
-        <button onClick={() => changeLanguage('en')}>en</button>
+        {/* <button onClick={() => changeLanguage('de')}>de</button>
+        <button onClick={() => changeLanguage('en')}>en</button> */}
       </div>
       <div className="Home-intro">
         <MyComponent />
