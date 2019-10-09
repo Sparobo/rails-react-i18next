@@ -188,7 +188,7 @@ path (http://my.site.com/LANGUAGE/...)
 subdomain (http://LANGUAGE.site.com/...)
 ```
 
-ユーザごとに、まずDBから言語情報を取得して、<html lang="<% @lang %>">ような形で言語を切り替えることができると思います。
+ユーザごとに、まずDBから言語情報を取得して、html lang=" @lang " ような形で言語を切り替えることができると思います。
 
 一旦、例として、DBから言語取得のかわり、lang paramで使います。以下を試してください。
 
