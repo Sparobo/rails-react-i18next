@@ -21,10 +21,14 @@ i18n
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
     },
-
     backend: {
       loadPath: '/locales/{{lng}}.json',
-    }
+    },
+    detection: {
+      // デフォルトの優先順はこちらです。
+      // order: ['querystring', 'cookie', 'localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+      order: ['htmlTag'],
+    },
   });
 
 export default i18n;

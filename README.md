@@ -171,6 +171,30 @@ i18n.changeLanguage('en');
 i18n.changeLanguage('de');
 ```
 
+# アカウントごと言語を切り替える
+https://github.com/i18next/i18next-browser-languageDetector
+
+これを使用すると、ユーザのブラウザのCookie, localStorage , querystringなど言語を取得して、i18nextで言語を設定できます。 
+
+```
+This is a i18next language detection plugin use to detect user language in the browser with support for:
+
+cookie (set cookie i18next=LANGUAGE)
+localStorage (set key i18nextLng=LANGUAGE)
+navigator (set browser language)
+querystring (append ?lng=LANGUAGE to URL)
+htmlTag (add html language tag <html lang="LANGUAGE" ...)
+path (http://my.site.com/LANGUAGE/...)
+subdomain (http://LANGUAGE.site.com/...)
+```
+
+ユーザごとに、まずDBから言語情報を取得して、<html lang="<% @lang %>">ような形で言語を切り替えることができると思います。
+
+一旦、例として、DBから言語取得のかわり、lang paramで使います。以下を試してください。
+
+- http://0.0.0.0:3000?lang=en
+- http://0.0.0.0:3000?lang=de
+
 ## DIFF確認用
 https://github.com/Sparobo/rails-react-i18next/compare/f0bbc9048e0d7760300647b392636c65dbce3716...master
 
