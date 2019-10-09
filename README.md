@@ -22,9 +22,7 @@ $ docker-compose up
 
 http://0.0.0.0:3000/
 
-de-enボタンをクリックして言語が切り替えることを確認してください。
-
-[![Image from Gyazo](https://i.gyazo.com/d4af5ff6fa63d62fc9d611aaeb65311b.gif)](https://gyazo.com/d4af5ff6fa63d62fc9d611aaeb65311b)
+[![Image from Gyazo](https://i.gyazo.com/4cb2d1f4456e1888b9a6077265bb070c.gif)](https://gyazo.com/4cb2d1f4456e1888b9a6077265bb070c)
 
 # 設定内容
 
@@ -188,12 +186,14 @@ path (http://my.site.com/LANGUAGE/...)
 subdomain (http://LANGUAGE.site.com/...)
 ```
 
-ユーザごとに、まずDBから言語情報を取得して、html lang=" @lang " ような形で言語を切り替えることができると思います。
+ユーザごとに、まずDBから言語情報を取得して、htmlTagで言語を指定して、React側に言語を切り替えると思います。
 
 一旦、例として、DBから言語取得のかわり、lang paramで使います。以下を試してください。
 
 - http://0.0.0.0:3000?lang=en
 - http://0.0.0.0:3000?lang=de
+
+[![Image from Gyazo](https://i.gyazo.com/4cb2d1f4456e1888b9a6077265bb070c.gif)](https://gyazo.com/4cb2d1f4456e1888b9a6077265bb070c)
 
 ## DIFF確認用
 https://github.com/Sparobo/rails-react-i18next/compare/f0bbc9048e0d7760300647b392636c65dbce3716...master
